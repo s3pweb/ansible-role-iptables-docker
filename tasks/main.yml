@@ -112,7 +112,7 @@
     - iptables_docker
 
 - name: iptables Docker | Check for problem services
-  command: systemctl show -p UnitFileState -p SubState {{ item }} warn=false
+  command: systemctl show -p UnitFileState -p SubState {{ item }}
   register: stat_service_bad
   changed_when: false
   # no_log: true
