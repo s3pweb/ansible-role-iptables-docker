@@ -56,8 +56,8 @@ iptables_docker_external_network_adapter:
 
 # "Global" Ports to allow. Ports here will allow all tcp traffic to these ports from iptables level.
 # Only for ports on OS, not for Docker containers.
-iptables_docker_global_ports_allow_tcp:
-  - {{ ssh_port | default(22) | int }}                   # SSH
+iptables_docker_global_ports_allow_tcp: []
+  # /!\ syntax error - {{ ssh_port | default(22) | int }}                   # SSH
 
 # "Global" Ports to allow. Ports here will allow all udp traffic to these ports from iptables level.
 # Only for ports on OS, not for Docker containers.
